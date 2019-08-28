@@ -1,0 +1,23 @@
+{
+  "name": "@bifravst/modemtalk",
+  "version": "0.0.0-development",
+  "description": "library to interface with the nRF9160 modem",
+  "main": "index.js",
+  "scripts": {
+    "test": "node __tests__/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bifravst/modemtalk.git"
+  },
+  "keywords": [
+    "nrf9160",
+    "modem"
+  ],
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-4-Clause",
+  "bugs": {
+    "url": "https://github.com/bifravst/modemtalk/issues"
+  },
+  "homepage": "https://github.com/bifravst/modemtalk#readme"
+}
