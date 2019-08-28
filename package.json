@@ -47,5 +47,12 @@
       "standard --write",
       "git add"
     ]
+  },
+  "release": {
+    "branch": "saga",
+    "remoteTags": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
