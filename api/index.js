@@ -34,44 +34,46 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import DRX from './DRX';
-import Registration from './Registration';
-import ErrorReporting from './ErrorReporting';
-import Functionality from './Functionality';
-import ModemInfo from './ModemInfo';
-import ModeOfOperation from './ModeOfOperation';
-import NetworkErrorReporting from './NetworkErrorReporting';
-import PacketDomainEvents from './PacketDomainEvents';
-import PDPContext from './PDPContext';
-import PLMNSelection from './PLMNSelection';
-import SignalQuality from './SignalQuality';
-import SupportedCommands from './SupportedCommands';
-import SupportedRadio from './SupportedRadio';
-import USIM from './USIM';
-import PINCode from './PINCode';
-import NeighbouringCells from './NeighbouringCells';
-import CurrentBand from './CurrentBand';
-import IndicatorControl from './IndicatorControl';
-import TLSCredentials from './TLSCredentials';
+const DRX = require('./DRX')
+const Registration = require('./Registration')
+const ErrorReporting = require('./ErrorReporting')
+const Functionality = require('./Functionality')
+const ModemInfo = require('./ModemInfo')
+const ModeOfOperation = require('./ModeOfOperation')
+const NetworkErrorReporting = require('./NetworkErrorReporting')
+const PacketDomainEvents = require('./PacketDomainEvents')
+const PDPContext = require('./PDPContext')
+const PLMNSelection = require('./PLMNSelection')
+const SignalQuality = require('./SignalQuality')
+const SupportedCommands = require('./SupportedCommands')
+const SupportedRadio = require('./SupportedRadio')
+const USIM = require('./USIM')
+const PINCode = require('./PINCode')
+const NeighbouringCells = require('./NeighbouringCells')
+const CurrentBand = require('./CurrentBand')
+const IndicatorControl = require('./IndicatorControl')
+const TLSCredentials = require('./TLSCredentials')
 
-export default target => {
-    DRX(target);
-    Registration(target);
-    ErrorReporting(target);
-    Functionality(target);
-    ModemInfo(target);
-    ModeOfOperation(target);
-    NetworkErrorReporting(target);
-    PacketDomainEvents(target);
-    PDPContext(target);
-    PLMNSelection(target);
-    SignalQuality(target);
-    SupportedCommands(target);
-    SupportedRadio(target);
-    USIM(target);
-    PINCode(target);
-    NeighbouringCells(target);
-    CurrentBand(target);
-    IndicatorControl(target);
-    TLSCredentials(target);
-};
+module.exports = {
+  api: target => {
+    DRX(target)
+    Registration(target)
+    ErrorReporting(target)
+    Functionality(target)
+    ModemInfo(target)
+    ModeOfOperation(target)
+    NetworkErrorReporting(target)
+    PacketDomainEvents(target)
+    PDPContext(target)
+    PLMNSelection(target)
+    SignalQuality(target)
+    SupportedCommands(target)
+    SupportedRadio(target)
+    USIM(target)
+    PINCode(target)
+    NeighbouringCells(target)
+    CurrentBand(target)
+    IndicatorControl(target)
+    TLSCredentials(target)
+  }
+}

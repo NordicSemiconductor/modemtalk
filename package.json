@@ -4,7 +4,7 @@
   "description": "library to interface with the nRF9160 modem",
   "main": "index.js",
   "scripts": {
-    "test": "node __tests__/index.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,33 @@
   "bugs": {
     "url": "https://github.com/bifravst/modemtalk/issues"
   },
-  "homepage": "https://github.com/bifravst/modemtalk#readme"
+  "homepage": "https://github.com/bifravst/modemtalk#readme",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "mcc-mnc-list": "^1.0.82",
+    "serialport": "^7.1.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-angular": "^8.1.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "standard": "^14.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e",
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --write",
+      "git add"
+    ]
+  }
 }
