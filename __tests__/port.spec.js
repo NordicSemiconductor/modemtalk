@@ -6,7 +6,7 @@ const os = require('os')
 describe('port', () => {
   if (os.type() !== 'Windows_NT') {
     test.only('skipped', () => {
-      console.warn('skipping tests (OS is not Windows)')
+      console.warn('skipping tests (port tests only supported on Windows)')
     })
   }
   const port = new ModemPort('COM00')
