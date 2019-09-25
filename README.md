@@ -1,4 +1,4 @@
-# Modemtalk [![npm version](https://img.shields.io/npm/v/@bifravst/modemtalk.svg)](https://www.npmjs.com/package/@bifravst/modemtalk)
+# Modemtalk
 
 [![GitHub Actions](https://github.com/bifravst/modemtalk/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/modemtalk/actions)
 [![Greenkeeper badge](https://badges.greenkeeper.io/bifravst/modemtalk.svg)](https://greenkeeper.io/)
@@ -9,6 +9,15 @@
 Library to interface with the nRF9160 modem.
 
 This is a stand-alone publication of the `modemtalk` folder from https://github.com/NordicSemiconductor/pc-nrfconnect-linkmonitor/.
+
+## Installation
+
+> Note: This package is hosted on the GitHub package registry and 
+> [npm needs to be configured](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#installing-a-package)
+> in order to use it.
+
+    echo "@bifravst:registry=https://npm.pkg.github.com" >> .npmrc
+    npm i --save-dev @bifravst/modemtalk
 
 ## Usage
 
