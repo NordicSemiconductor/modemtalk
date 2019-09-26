@@ -1,8 +1,8 @@
 # Modemtalk
 
-[![GitHub Package Registry version](https://img.shields.io/github/release/bifravst/modemtalk.svg?label=GPR&logo=github)](https://github.com/bifravst/modemtalk/packages/26701)
-[![GitHub Actions](https://github.com/bifravst/modemtalk/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/modemtalk/actions)
-[![Greenkeeper badge](https://badges.greenkeeper.io/bifravst/modemtalk.svg)](https://greenkeeper.io/)
+<!-- [![GitHub Package Registry version](https://img.shields.io/github/release/NordicSemiconductor/modemtalk.svg?label=GPR&logo=github)](https://github.com/NordicSemiconductor/modemtalk/packages/26701) -->
+[![GitHub Actions](https://github.com/NordicSemiconductor/modemtalk/workflows/Test%20and%20Release/badge.svg)](https://github.com/NordicSemiconductor/modemtalk/actions)
+[![Greenkeeper badge](https://badges.greenkeeper.io/NordicSemiconductor/modemtalk.svg)](https://greenkeeper.io/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -17,14 +17,14 @@ This is a stand-alone publication of the `modemtalk` folder from https://github.
 > [npm needs to be configured](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#installing-a-package)
 > in order to use it.
 
-    echo "@bifravst:registry=https://npm.pkg.github.com" >> .npmrc
-    npm i --save-dev @bifravst/modemtalk
+    echo "@nordicsemiconductor:registry=https://npm.pkg.github.com" >> .npmrc
+    npm i --save-dev @nordicsemiconductor/modemtalk
 
 ## Usage
 
 Install it as a dependency in your project:
 
-    npm i --save @bifravst/modemtalk
+    npm i --save @nordicsemiconductor/modemtalk
 
 Then use `ModemPort` to communicate with the device:
 
@@ -53,4 +53,4 @@ turnOffModem()
 ### More examples
 
 - see usage in the [Link Monitor](https://github.com/NordicSemiconductor/pc-nrfconnect-linkmonitor/search?q=modemport&unscoped_q=modemport)
-- [a script to write TLS credentials](https://github.com/bifravst/aws/blob/15c65558419914d0d5b4bed5d4f98b3128957da3/cli/commands/flash-cert.ts)
+- [a script to write TLS credentials](https://github.com/NordicSemiconductor/aws/blob/15c65558419914d0d5b4bed5d4f98b3128957da3/cli/commands/flash-cert.ts)
