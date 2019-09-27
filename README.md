@@ -1,6 +1,6 @@
 # Modemtalk
 
-<!-- [![GitHub Package Registry version](https://img.shields.io/github/release/NordicSemiconductor/modemtalk.svg?label=GPR&logo=github)](https://github.com/NordicSemiconductor/modemtalk/packages/26701) -->
+[![npm version](https://img.shields.io/npm/v/@bifravst/modemtalk.svg)](https://www.npmjs.com/package/modemtalk)
 [![GitHub Actions](https://github.com/NordicSemiconductor/modemtalk/workflows/Test%20and%20Release/badge.svg)](https://github.com/NordicSemiconductor/modemtalk/actions)
 [![Greenkeeper badge](https://badges.greenkeeper.io/NordicSemiconductor/modemtalk.svg)](https://greenkeeper.io/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
@@ -10,15 +10,6 @@
 Library to interface with the nRF9160 modem.
 
 This is a stand-alone publication of the `modemtalk` folder from https://github.com/NordicSemiconductor/pc-nrfconnect-linkmonitor/.
-
-## Installation
-
-> Note: This package is hosted on the GitHub package registry and 
-> [npm needs to be configured](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#installing-a-package)
-> in order to use it.
-
-    echo "@nordicsemiconductor:registry=https://npm.pkg.github.com" >> .npmrc
-    npm i @nordicsemiconductor/modemtalk
 
 ## Usage
 

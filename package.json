@@ -1,5 +1,5 @@
 {
-  "name": "@nordicsemiconductor/modemtalk",
+  "name": "modemtalk",
   "version": "0.0.0-development",
   "description": "library to interface with the nRF9160 modem",
   "main": "index.js",
@@ -53,7 +53,6 @@
     "remoteTags": true
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }
