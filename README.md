@@ -15,7 +15,7 @@ This is a stand-alone publication of the `modemtalk` folder from https://github.
 
 Install it as a dependency in your project:
 
-    npm i --save @nordicsemiconductor/modemtalk
+    npm i --save modemtalk
 
 Then use `ModemPort` to communicate with the device:
 
