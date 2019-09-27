@@ -18,7 +18,7 @@ This is a stand-alone publication of the `modemtalk` folder from https://github.
 > in order to use it.
 
     echo "@nordicsemiconductor:registry=https://npm.pkg.github.com" >> .npmrc
-    npm i --save-dev @nordicsemiconductor/modemtalk
+    npm i @nordicsemiconductor/modemtalk
 
 ## Usage
 
