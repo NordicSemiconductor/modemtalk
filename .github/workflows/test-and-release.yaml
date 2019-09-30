@@ -18,7 +18,7 @@ jobs:
       - name: Semantic release
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           # FIXME: remove use of pinned semantic-release when https://github.com/pvdlg/env-ci/pull/101 is merged
