@@ -20,7 +20,7 @@ Install it as a dependency in your project:
 Then use `ModemPort` to communicate with the device:
 
 ```javascript
-const { ModemPort } = require('./')
+const { ModemPort } = require('modemtalk')
 
 const turnOffModem = async () => {
   const device = new ModemPort('/dev/ttyACM0', {
