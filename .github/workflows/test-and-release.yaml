@@ -11,6 +11,7 @@ jobs:
         run: |
           sudo npm install -g npm@
           npm config set update-notifier false
+          sudo chown -R $USER:$(id -gn $USER) ~/.config
       - name: Install dependencies
         run: npm ci --no-audit
       - name: Test
