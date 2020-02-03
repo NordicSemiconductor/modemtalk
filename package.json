@@ -25,15 +25,15 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "mcc-mnc-list": "^1.0.82",
-    "serialport": "^8.0.5"
+    "mcc-mnc-list": "^1.1.0",
+    "serialport": "^8.0.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "lint-staged": "^9.4.3",
+    "lint-staged": "^9.5.0",
     "standard": "^14.3.1"
   },
   "husky": {
