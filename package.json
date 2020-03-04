@@ -49,7 +49,9 @@
     ]
   },
   "release": {
-    "branch": "saga",
+    "branches": [
+      "saga"
+    ],
     "remoteTags": true
   },
   "publishConfig": {
