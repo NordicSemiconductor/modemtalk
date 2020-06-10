@@ -14,7 +14,8 @@ class ModemPort extends SerialPort {
       dataBits: 8,
       stopBits: 1,
       parity: 'none',
-      rtscts: true
+      rtscts: true,
+      ...opts
     })
     this.requestQueue = []
     this.busy = false
