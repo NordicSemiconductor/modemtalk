@@ -24,7 +24,7 @@ const PLMNFormat = {
   NUMERIC: 2
 }
 
-const timeout = 60000
+const timeout = 180000
 const expect = /\+COPS: ?(?:(\(.*?\),?)+|(([0-2])(?:,([0-2]),"([^"]*)")?))/
 
 function convertResponse (resp) {
@@ -93,9 +93,9 @@ module.exports = target => {
         processor: lines => convertResponse(lines.pop())
       })
     },
-    testPLMNSelection () {
+    testPLMNSelection (opts = {}) {
       return this.writeAT('+COPS=?', {
-        timeout,
+        timeout: opts.timeout || timeout,
         expect,
         processor: lines => convertResponse(lines.pop())
       })
