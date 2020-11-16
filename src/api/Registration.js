@@ -4,11 +4,13 @@ const Registration = {
   DISABLE: 0,
   ENABLE: 1,
   ENABLE_WITH_LOCATION: 2,
-  ENABLE_WITH_LOCATION_AND_CAUSE: 3
+  ENABLE_WITH_LOCATION_AND_CAUSE: 3,
+  ENABLE_4: 4,
+  ENABLE_5: 5
 }
 
-// +CEREG: [<n>,]<stat>[,<tac>,<ci>,<AcT>[,<cause_type>,<reject_cause>]]
-const expect = /\+C([EG])REG: (?:(\d+),)?(\d+)(?:,"([0-9A-F]{1,4})","([0-9A-F]{1,8})"(?:,(\d)(?:,([^,]*),(.*))?)?)?/
+// +CEREG: [<n>,]<stat>[,<tac>,<ci>,<AcT>[,<cause_type>,<reject_cause>[,<Active-Time>,<Periodic-TAU>]]]
+const expect = /\+C([EG])REG: (?:(\d+),)?(\d+)(?:,"([0-9A-F]{1,4})","([0-9A-F]{1,8})"(?:,(\d)(?:,(\d?),(\d*)(?:,"([0-9A-F]{1,8})","([0-9A-F]{1,8})")?)?)?)?/
 
 const Stat = {
   0: 'not registered',
@@ -24,12 +26,14 @@ const Stat = {
 function convertResponse (resp) {
   const r = expect.exec(resp)
   if (r) {
-    const [, d, n0, stat0, tac0, ci0, act0, causeType0, rejectCause0] = r
+    const [, d, n0, stat0, tac0, ci0, act0, causeType0, rejectCause0, activeTime0, periodicTau0] = r
     const [n, stat, AcT, causeType, rejectCause] = arrayParseInt(
       [n0, stat0, act0, causeType0, rejectCause0], 10
     )
-    const tac = parseInt(tac0, 16)
-    const ci = parseInt(ci0, 16)
+    const tac = tac0 ? parseInt(tac0, 16) : undefined
+    const ci = ci0 ? parseInt(ci0, 16) : undefined
+    const activeTime = activeTime0 ? parseInt(activeTime0, 16) : undefined
+    const periodicTau = periodicTau0 ? parseInt(periodicTau0, 16) : undefined
     const domain = { E: 'eps', G: 'gprs' }[d]
     return {
       id: 'registration',
@@ -42,6 +46,8 @@ function convertResponse (resp) {
       AcT,
       causeType,
       rejectCause,
+      activeTime,
+      periodicTau,
       category: EventCategory.NETWORK,
       message: `${domain.toUpperCase()} registration: ${Stat[stat]}`
     }

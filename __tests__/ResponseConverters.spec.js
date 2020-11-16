@@ -112,7 +112,9 @@ const testCommands = [
       rejectCause: undefined,
       stat: 1,
       status: 'registered, home network',
-      tac: 47
+      tac: 47,
+      activeTime: undefined,
+      periodicTau: undefined
     }
   ],
   [
