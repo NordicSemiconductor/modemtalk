@@ -28,7 +28,7 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "mcc-mnc-list": "^1.1.1",
+    "mcc-mnc-list": "^1.1.8",
     "serialport": "^9.0.0"
   },
   "devDependencies": {
