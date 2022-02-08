@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "mcc-mnc-list": "^1.1.8",
-    "serialport": "^9.0.0"
+    "serialport": "^9.2.8"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
