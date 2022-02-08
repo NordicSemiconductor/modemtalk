@@ -3,10 +3,8 @@
   "ignorePresets": [":prHourlyLimit2", ":prConcurrentLimit20"],
   "packageRules": [
     {
-      "updateTypes": ["minor", "pin", "digest"],
-      "automerge": true,
       "rangeStrategy": "bump",
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies",
         "devDependencies",
         "optionalDependencies",
@@ -14,11 +12,20 @@
       ]
     },
     {
-      "updateTypes": ["patch", "lockFileMaintenance"],
+      "matchUpdateTypes": ["minor", "pin", "digest"],
+      "automerge": true,
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "optionalDependencies",
+        "peerDependencies"
+      ]
+    },
+    {
+      "matchUpdateTypes": ["patch", "lockFileMaintenance"],
       "automerge": true,
       "automergeType": "branch",
-      "rangeStrategy": "bump",
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies",
         "devDependencies",
         "optionalDependencies",
