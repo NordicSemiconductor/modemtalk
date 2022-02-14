@@ -1,4 +1,4 @@
-const SerialPort = require('serialport')
+const { SerialPort } = require('serialport')
 const { api } = require('./api')
 const { EventCategory } = require('./utils')
 
@@ -8,7 +8,8 @@ const commandsWithoutPrefixedResponse = ['AT+CLAC', 'AT+CGSN', 'AT+CGMM', 'AT+CG
 
 class ModemPort extends SerialPort {
   constructor (port, opts) {
-    super(port, {
+    super({
+      path: port,
       autoOpen: false,
       baudRate: 115200,
       dataBits: 8,
