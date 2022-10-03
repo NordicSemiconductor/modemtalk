@@ -1,5 +1,8 @@
 # Modemtalk
 
+> **Warning**  
+> End-of-life: modemtalk is no longer maintained.
+
 [![npm version](https://img.shields.io/npm/v/modemtalk.svg)](https://www.npmjs.com/package/modemtalk)
 [![GitHub Actions](https://github.com/NordicSemiconductor/modemtalk/workflows/Test%20and%20Release/badge.svg)](https://github.com/NordicSemiconductor/modemtalk/actions)
 [![Greenkeeper badge](https://badges.greenkeeper.io/NordicSemiconductor/modemtalk.svg)](https://greenkeeper.io/)
